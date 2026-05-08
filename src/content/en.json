@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "ecology": "Ecology",
+    "threats": "Threats",
+    "recovery": "Recovery",
+    "sightseeing": "Ethical Sighting"
+  },
+  "hero": {
+    "title": "Symbol of the Skies of",
+    "subtitle": "Discover the story of the Scarlet Macaw in the Guanacaste dry forest: a journey of survival, ecology, and hope.",
+    "cta_primary": "Explore Story",
+    "cta_secondary": "How to Help"
+  }
+}

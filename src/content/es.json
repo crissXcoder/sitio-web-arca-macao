@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "ecology": "Ecología",
+    "threats": "Amenazas",
+    "recovery": "Recuperación",
+    "sightseeing": "Avistamiento Ético"
+  },
+  "hero": {
+    "title": "Símbolo de los Cielos de",
+    "subtitle": "Descubre la historia de la Lapa Roja en el bosque seco de Guanacaste: un viaje de supervivencia, ecología y esperanza.",
+    "cta_primary": "Explorar Historia",
+    "cta_secondary": "Cómo Ayudar"
+  }
+}
