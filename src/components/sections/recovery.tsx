@@ -1,9 +1,5 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { NumberCounter } from "@/components/animations/number-counter";
 import type { Dictionary } from "@/types/dictionary";
 
 interface RecoveryProps {
@@ -17,43 +13,8 @@ interface RecoveryStat {
 }
 
 export function Recovery({ dict }: RecoveryProps) {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (statsRef.current) {
-      const stats = statsRef.current.querySelectorAll(".stat-value");
-      stats.forEach((stat) => {
-        const value = stat.getAttribute("data-value");
-        if (value) {
-          gsap.fromTo(stat, 
-            { innerHTML: 0 },
-            { 
-              innerHTML: value,
-              duration: 2,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: stat,
-                start: "top 85%",
-                toggleActions: "play none none reverse",
-              },
-              snap: { innerHTML: 1 },
-              onUpdate: function() {
-                // Formatting for thousands if needed
-                const current = Math.floor(this.targets()[0].innerHTML);
-                this.targets()[0].innerHTML = current.toString();
-              }
-            }
-          );
-        }
-      });
-    }
-  }, []);
-
   return (
-    <section id="recovery" ref={sectionRef} className="py-32 lg:py-48 bg-paper relative overflow-hidden">
+    <section id="recovery" className="py-32 lg:py-48 bg-paper relative overflow-hidden">
       {/* Decorative Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -98,46 +59,48 @@ export function Recovery({ dict }: RecoveryProps) {
           </div>
 
           {/* Scientific Stats Dashboard */}
-          <div 
-            ref={statsRef}
-            className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4"
-          >
-            {dict.recovery.stats.map((stat: RecoveryStat, index: number) => (
-              <ScrollReveal 
-                key={index} 
-                direction="up"
-                delay={index * 0.1}
-                className="group relative bg-white p-10 lg:p-14 flex flex-col justify-between min-h-[320px] border border-black/[0.03] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-700 hover:-translate-y-2 overflow-hidden"
-              >
-                {/* Subtle Progress Bar Background */}
-                <div className="absolute bottom-0 left-0 h-1 bg-accent/10 w-0 group-hover:w-full transition-all duration-1000 ease-out" />
-                
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <span className="font-sans text-[9px] font-black uppercase tracking-[0.2em] text-black/20">
-                      Metric Unit {index + 1}
-                    </span>
-                    <div className="w-2 h-2 rounded-full bg-accent/20 group-hover:bg-accent transition-colors duration-500" />
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {dict.recovery.stats.map((stat: RecoveryStat, index: number) => {
+              const numericValue = parseInt(stat.value.replace(/[^0-9]/g, ''), 10) || 0;
+              const suffix = stat.value.replace(/[0-9]/g, '');
+
+              return (
+                <ScrollReveal 
+                  key={index} 
+                  direction="up"
+                  delay={index * 0.1}
+                  className="group relative bg-white p-10 lg:p-14 flex flex-col justify-between min-h-[320px] border border-black/[0.03] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-700 hover:-translate-y-2 overflow-hidden"
+                >
+                  {/* Subtle Progress Bar Background */}
+                  <div className="absolute bottom-0 left-0 h-1 bg-accent/10 w-0 group-hover:w-full transition-all duration-1000 ease-out" />
+                  
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-start">
+                      <span className="font-sans text-[9px] font-black uppercase tracking-[0.2em] text-black/20">
+                        Metric Unit {index + 1}
+                      </span>
+                      <div className="w-2 h-2 rounded-full bg-accent/20 group-hover:bg-accent transition-colors duration-500" />
+                    </div>
+                    <h3 className="font-serif text-8xl lg:text-9xl text-accent tracking-tighter leading-none flex items-baseline gap-1">
+                      <NumberCounter endValue={numericValue} />
+                      <span className="text-4xl lg:text-5xl font-light opacity-50">{suffix}</span>
+                    </h3>
                   </div>
-                  <h3 className="font-serif text-8xl lg:text-9xl text-accent tabular-nums tracking-tighter leading-none flex items-baseline gap-1">
-                    <span className="stat-value" data-value={stat.value.replace(/[^0-9]/g, '')}>0</span>
-                    <span className="text-4xl lg:text-5xl font-light opacity-50">{stat.value.replace(/[0-9]/g, '')}</span>
-                  </h3>
-                </div>
 
-                <div className="space-y-3 relative z-10">
-                  <h4 className="font-sans text-xs font-black uppercase tracking-[0.3em] text-black group-hover:text-accent transition-colors duration-500">
-                    {stat.label}
-                  </h4>
-                  <p className="font-sans text-sm text-black/40 leading-relaxed group-hover:text-black/60 transition-colors duration-500">
-                    {stat.description}
-                  </p>
-                </div>
+                  <div className="space-y-3 relative z-10">
+                    <h4 className="font-sans text-xs font-black uppercase tracking-[0.3em] text-black group-hover:text-accent transition-colors duration-500">
+                      {stat.label}
+                    </h4>
+                    <p className="font-sans text-sm text-black/40 leading-relaxed group-hover:text-black/60 transition-colors duration-500">
+                      {stat.description}
+                    </p>
+                  </div>
 
-                {/* Decorative Element */}
-                <div className="absolute -right-8 -top-8 w-24 h-24 border border-black/[0.02] rounded-full group-hover:scale-150 transition-transform duration-1000" />
-              </ScrollReveal>
-            ))}
+                  {/* Decorative Element */}
+                  <div className="absolute -right-8 -top-8 w-24 h-24 border border-black/[0.02] rounded-full group-hover:scale-150 transition-transform duration-1000" />
+                </ScrollReveal>
+              );
+            })}
             
             {/* Call to Action Block */}
             <ScrollReveal 
