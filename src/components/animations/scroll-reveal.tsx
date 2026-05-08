@@ -15,6 +15,7 @@ interface ScrollRevealProps {
   delay?: number;
   duration?: number;
   distance?: number;
+  className?: string;
 }
 
 export function ScrollReveal({
@@ -23,6 +24,7 @@ export function ScrollReveal({
   delay = 0,
   duration = 0.8,
   distance = 50,
+  className,
 }: ScrollRevealProps) {
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -50,5 +52,9 @@ export function ScrollReveal({
     { scope: elementRef }
   );
 
-  return <div ref={elementRef}>{children}</div>;
+  return (
+    <div ref={elementRef} className={className}>
+      {children}
+    </div>
+  );
 }
