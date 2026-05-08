@@ -6,9 +6,74 @@
     "sightseeing": "Avistamiento Ético"
   },
   "hero": {
-    "title": "Símbolo de los Cielos de",
-    "subtitle": "Descubre la historia de la Lapa Roja en el bosque seco de Guanacaste: un viaje de supervivencia, ecología y esperanza.",
-    "cta_primary": "Explorar Historia",
-    "cta_secondary": "Cómo Ayudar"
+    "title": "Símbolo de los Cielos",
+    "location": "Guanacaste",
+    "subtitle": "Un relato visual sobre el renacimiento de la Ara macao en el corazón del bosque seco tropical.",
+    "cta_primary": "Descubrir la Especie",
+    "cta_secondary": "Iniciativas"
+  },
+  "ecology": {
+    "title": "El Guardián del Bosque Seco",
+    "subtitle": "Una simbiosis ancestral grabada en plumas escarlatas.",
+    "content": "La Lapa Roja no es solo un habitante; es el arquitecto del dosel. En el rigor del bosque seco de Guanacaste, su existencia está ligada a los gigantes como el Ceiba y el Tempisque. Como dispersora de semillas y ocupante de cavidades naturales, su presencia dicta la salud y el futuro de la biodiversidad local."
+  },
+  "threats": {
+    "title": "Amenazas Silenciosas",
+    "subtitle": "Un ecosistema en equilibrio precario.",
+    "content": "La fragmentación del bosque seco y el saqueo ilegal de nidos han empujado a la Lapa Roja al borde del abismo. No es solo la pérdida de espacio; es la interrupción de ciclos de vida de décadas.",
+    "quote": "Cada árbol caído es un nido menos, una generación perdida en el eco del bosque.",
+    "items": {
+      "01": {
+        "title": "Saqueo Ilegal",
+        "description": "El tráfico de pichones para el mercado de mascotas sigue siendo una herida abierta en la conservación."
+      },
+      "02": {
+        "title": "Pérdida de Hábitat",
+        "description": "La expansión agrícola y ganadera reduce drásticamente los sitios de anidación seguros."
+      },
+      "03": {
+        "title": "Cambio Climático",
+        "description": "Sequías prolongadas afectan la disponibilidad de frutos y la supervivencia de los polluelos."
+      }
+    }
+  },
+  "recovery": {
+    "title": "El Camino del Regreso",
+    "subtitle": "Ciencia y comunidad en acción por la vida.",
+    "content": "La recuperación de la Lapa Roja en Guanacaste es uno de los mayores éxitos de conservación en el trópico seco. Mediante nidos artificiales y monitoreo constante, hemos logrado revertir una tendencia que parecía irreversible.",
+    "stats": [
+      {
+        "value": "150+",
+        "label": "Individuos Liberados",
+        "description": "Aves reintroducidas exitosamente al medio silvestre."
+      },
+      {
+        "value": "85%",
+        "label": "Tasa de Supervivencia",
+        "description": "En pichones nacidos en nidos monitoreados."
+      },
+      {
+        "value": "20+",
+        "label": "Años de Esfuerzo",
+        "description": "Dedicación ininterrumpida a la protección de la especie."
+      }
+    ]
+  },
+  "sightseeing": {
+    "title": "Avistamiento Ético",
+    "subtitle": "Observar sin intervenir es el mayor acto de respeto.",
+    "content": "La Lapa Roja es una especie sensible. Tu presencia debe ser invisible para que su comportamiento sea natural. Sigue estas pautas para asegurar que tu encuentro sea positivo tanto para ti como para las aves.",
+    "dos": [
+      "Mantén una distancia mínima de 20 metros.",
+      "Usa binoculares o lentes de largo alcance.",
+      "Viste colores neutros que se mezclen con el bosque.",
+      "Habla en voz baja y evita movimientos bruscos."
+    ],
+    "donts": [
+      "No alimentes a las aves bajo ninguna circunstancia.",
+      "No uses flashes o luces intensas.",
+      "No reproduzcas audios de llamados (playback).",
+      "No intentes tocar o perseguir a los individuos."
+    ]
   }
 }

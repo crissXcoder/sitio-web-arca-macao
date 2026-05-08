@@ -6,9 +6,74 @@
     "sightseeing": "Ethical Sighting"
   },
   "hero": {
-    "title": "Symbol of the Skies of",
-    "subtitle": "Discover the story of the Scarlet Macaw in the Guanacaste dry forest: a journey of survival, ecology, and hope.",
-    "cta_primary": "Explore Story",
-    "cta_secondary": "How to Help"
+    "title": "Symbol of the Skies",
+    "location": "Guanacaste",
+    "subtitle": "A visual narrative on the rebirth of the Ara macao in the heart of the tropical dry forest.",
+    "cta_primary": "Discover the Species",
+    "cta_secondary": "Initiatives"
+  },
+  "ecology": {
+    "title": "The Guardian of the Dry Forest",
+    "subtitle": "An ancestral symbiosis etched in scarlet feathers.",
+    "content": "The Scarlet Macaw is not just an inhabitant; it is the architect of the canopy. In the rigor of the Guanacaste dry forest, its existence is tied to giants like the Ceiba and the Tempisque. As a seed disperser and occupant of natural cavities, its presence dictates the health and future of local biodiversity."
+  },
+  "threats": {
+    "title": "Silent Threats",
+    "subtitle": "An ecosystem in precarious balance.",
+    "content": "The fragmentation of the dry forest and illegal nest poaching have pushed the Scarlet Macaw to the brink of the abyss. It is not just about the loss of space; it is the interruption of life cycles spanning decades.",
+    "quote": "Every fallen tree is one less nest, a generation lost in the forest echo.",
+    "items": {
+      "01": {
+        "title": "Illegal Poaching",
+        "description": "The trafficking of chicks for the pet market remains an open wound in conservation."
+      },
+      "02": {
+        "title": "Habitat Loss",
+        "description": "Agricultural and livestock expansion drastically reduces safe nesting sites."
+      },
+      "03": {
+        "title": "Climate Change",
+        "description": "Prolonged droughts affect fruit availability and chick survival."
+      }
+    }
+  },
+  "recovery": {
+    "title": "The Path of Return",
+    "subtitle": "Science and community in action for life.",
+    "content": "The recovery of the Scarlet Macaw in Guanacaste is one of the greatest conservation successes in the dry tropics. Through artificial nests and constant monitoring, we have managed to reverse a trend that seemed irreversible.",
+    "stats": [
+      {
+        "value": "150+",
+        "label": "Individuals Released",
+        "description": "Birds successfully reintroduced to the wild."
+      },
+      {
+        "value": "85%",
+        "label": "Survival Rate",
+        "description": "In chicks born in monitored nests."
+      },
+      {
+        "value": "20+",
+        "label": "Years of Effort",
+        "description": "Uninterrupted dedication to the protection of the species."
+      }
+    ]
+  },
+  "sightseeing": {
+    "title": "Ethical Sighting",
+    "subtitle": "Observing without intervening is the greatest act of respect.",
+    "content": "The Scarlet Macaw is a sensitive species. Your presence must be invisible for their behavior to remain natural. Follow these guidelines to ensure your encounter is positive for both you and the birds.",
+    "dos": [
+      "Maintain a minimum distance of 20 meters.",
+      "Use binoculars or long-range lenses.",
+      "Wear neutral colors that blend with the forest.",
+      "Speak quietly and avoid sudden movements."
+    ],
+    "donts": [
+      "Do not feed the birds under any circumstances.",
+      "Do not use flashes or intense lights.",
+      "Do not play bird call recordings (playback).",
+      "Do not attempt to touch or chase individuals."
+    ]
   }
 }
