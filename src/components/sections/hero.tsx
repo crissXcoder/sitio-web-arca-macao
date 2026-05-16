@@ -67,20 +67,20 @@ export function Hero({ dict }: HeroProps) {
       {/* Floating Info Cards - Subtle Decor */}
       <div className="absolute right-12 bottom-24 hidden lg:flex flex-col gap-8 z-20">
         <div className="p-6 bg-card/40 backdrop-blur-md border border-border/40 rounded-2xl max-w-[200px] hover:bg-card/60 transition-colors duration-500">
-          <span className="block font-sans text-[10px] font-black text-accent uppercase tracking-widest mb-2">Población</span>
-          <span className="block font-serif text-3xl text-foreground">1,500+</span>
-          <p className="text-[11px] text-muted-foreground mt-1">Individuos en estado salvaje</p>
+          <span className="block font-sans text-[10px] font-black text-accent uppercase tracking-widest mb-2">{dict.hero.cards.population.label}</span>
+          <span className="block font-serif text-3xl text-foreground">{dict.hero.cards.population.value}</span>
+          <p className="text-[11px] text-muted-foreground mt-1">{dict.hero.cards.population.desc}</p>
         </div>
         <div className="p-6 bg-card/40 backdrop-blur-md border border-border/40 rounded-2xl max-w-[200px] hover:bg-card/60 transition-colors duration-500">
-          <span className="block font-sans text-[10px] font-black text-accent uppercase tracking-widest mb-2">Hábitat</span>
-          <span className="block font-serif text-3xl text-foreground">Seco</span>
-          <p className="text-[11px] text-muted-foreground mt-1">Bosque tropical de Guanacaste</p>
+          <span className="block font-sans text-[10px] font-black text-accent uppercase tracking-widest mb-2">{dict.hero.cards.habitat.label}</span>
+          <span className="block font-serif text-3xl text-foreground">{dict.hero.cards.habitat.value}</span>
+          <p className="text-[11px] text-muted-foreground mt-1">{dict.hero.cards.habitat.desc}</p>
         </div>
       </div>
 
       {/* Scroll Indicator - Premium */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20 opacity-40">
-        <span className="font-sans text-[9px] font-black tracking-[0.5em] text-foreground uppercase">Explorar</span>
+        <span className="font-sans text-[9px] font-black tracking-[0.5em] text-foreground uppercase">{dict.hero.explore}</span>
         <div className="relative h-12 w-px overflow-hidden bg-border" aria-hidden="true">
           <div className="absolute top-0 left-0 h-full w-full animate-scroll-line bg-accent" />
         </div>

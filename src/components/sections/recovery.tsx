@@ -8,6 +8,7 @@ interface RecoveryProps {
 
 interface RecoveryStat {
   value: string;
+  meta: string;
   label: string;
   description: string;
 }
@@ -28,7 +29,7 @@ export function Recovery({ dict }: RecoveryProps) {
               <div className="space-y-6">
                 <div className="space-y-4">
                   <span className="font-sans text-[10px] font-black uppercase tracking-[0.4em] text-accent/80">
-                    Restauración Ecológica
+                    {dict.recovery.tag}
                   </span>
                   <h2 className="font-serif text-6xl lg:text-8xl leading-[0.9] text-foreground tracking-tighter">
                     {dict.recovery.title}
@@ -51,7 +52,7 @@ export function Recovery({ dict }: RecoveryProps) {
                 <blockquote className="relative">
                   <span className="absolute -top-10 -left-6 font-serif text-[10rem] text-accent/10 pointer-events-none">&quot;</span>
                   <p className="font-serif text-3xl lg:text-4xl text-muted-foreground/80 leading-snug italic relative z-10">
-                    &quot;La conservación no es solo salvar una especie, es restaurar la sinfonía del bosque.&quot;
+                    &quot;{dict.recovery.quote}&quot;
                   </p>
                 </blockquote>
               </div>
@@ -77,7 +78,7 @@ export function Recovery({ dict }: RecoveryProps) {
                   <div className="space-y-4">
                     <div className="flex justify-between items-start">
                       <span className="font-sans text-[9px] font-black uppercase tracking-[0.2em] text-muted-foreground/50 group-hover:text-muted-foreground transition-colors duration-500">
-                        Metric Unit {index + 1}
+                        {stat.meta}
                       </span>
                       <div className="w-2 h-2 rounded-full bg-accent/20 group-hover:bg-accent transition-colors duration-500" />
                     </div>
@@ -110,8 +111,8 @@ export function Recovery({ dict }: RecoveryProps) {
             >
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
               <div className="relative z-10 space-y-6">
-                <h4 className="font-serif text-3xl lg:text-4xl leading-tight">¿Quieres ser parte?</h4>
-                <p className="font-sans text-[10px] font-black opacity-60 uppercase tracking-[0.3em]">Apoya los esfuerzos de monitoreo</p>
+                <h4 className="font-serif text-3xl lg:text-4xl leading-tight">{dict.recovery.cta.title}</h4>
+                <p className="font-sans text-[10px] font-black opacity-60 uppercase tracking-[0.3em]">{dict.recovery.cta.subtitle}</p>
                 <div className="w-16 h-16 rounded-full border border-accent-foreground/20 flex items-center justify-center group-hover:border-primary-foreground/50 group-hover:scale-110 transition-all duration-500">
                   <svg className="w-8 h-8 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -126,7 +127,7 @@ export function Recovery({ dict }: RecoveryProps) {
 
       {/* Narrative Progress Text */}
       <div className="absolute bottom-10 left-10 font-sans text-[8px] font-black uppercase tracking-[0.5em] text-foreground/10 vertical-rl hidden lg:block">
-        Conservation Metrics — Data Driven Restoration
+        {dict.recovery.bg_text}
       </div>
     </section>
   );

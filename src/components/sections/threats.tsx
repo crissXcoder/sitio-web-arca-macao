@@ -28,7 +28,7 @@ export function Threats({ dict }: ThreatsProps) {
             <ImageColorReveal triggerStart="top 40%" className="relative aspect-video lg:aspect-[16/10] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)]">
               <Image
                 src="/images/threats-habitat.png"
-                alt="Destrucción del hábitat en Guanacaste"
+                alt={dict.threats.image_alt}
                 fill
                 className="object-cover"
               />
@@ -40,10 +40,10 @@ export function Threats({ dict }: ThreatsProps) {
             <ScrollReveal direction="up" delay={0.2} className="absolute -bottom-16 right-0 lg:-right-16 bg-card/40 backdrop-blur-2xl p-10 lg:p-16 max-w-lg border border-border/40 shadow-2xl z-10">
               <div className="space-y-6">
                 <span className="inline-block px-3 py-1 bg-accent/20 border border-accent/30 text-accent font-sans text-[10px] font-black uppercase tracking-[0.3em]">
-                  Impacto Crítico
+                  {dict.threats.impact_tag}
                 </span>
                 <p className="font-serif text-3xl lg:text-4xl text-foreground font-light leading-tight italic">
-                  &quot;Cada árbol caído es un nido menos, una generación perdida en el eco del bosque.&quot;
+                  &quot;{dict.threats.quote}&quot;
                 </p>
                 <div className="h-px w-20 bg-accent/50" />
               </div>
@@ -56,7 +56,7 @@ export function Threats({ dict }: ThreatsProps) {
               <div className="space-y-8 mt-12 lg:mt-0">
                 <div className="space-y-4">
                   <span className="font-sans text-xs font-black tracking-[0.5em] text-accent uppercase">
-                    AMENAZAS ACTUALES
+                    {dict.threats.tag}
                   </span>
                   <h2 className="font-serif text-6xl lg:text-8xl leading-[0.9] font-light tracking-tighter text-foreground">
                     {dict.threats.title}
@@ -95,7 +95,7 @@ export function Threats({ dict }: ThreatsProps) {
 
       {/* Abstract Danger Decor */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 font-serif text-[30vw] font-black text-foreground/[0.03] pointer-events-none select-none uppercase">
-        Crisis
+        {dict.threats.bg_text}
       </div>
     </ColorRevealSection>
   );

@@ -11,28 +11,28 @@ interface EcologyProps {
 export function Ecology({ dict }: EcologyProps) {
   const bentoItems: BentoItem[] = [
     {
-      title: "Dependencia de Cavidades",
-      meta: "Crítico",
-      description: "Dependen de árboles maduros de gran diámetro con cavidades naturales para anidar y asegurar su reproducción.",
+      title: dict.ecology.cards[0].title,
+      meta: dict.ecology.cards[0].meta,
+      description: dict.ecology.cards[0].description,
       icon: <TreeDeciduous className="w-6 h-6" />,
-      status: "85%",
-      tags: ["Nidificación", "Supervivencia"],
+      status: dict.ecology.cards[0].status,
+      tags: dict.ecology.cards[0].tags,
     },
     {
-      title: "Especies en Simbiosis",
-      meta: "Flora",
-      description: "Interactúan activamente con cientos de especies del bosque seco tropical, vitales para su dieta y el ecosistema.",
+      title: dict.ecology.cards[1].title,
+      meta: dict.ecology.cards[1].meta,
+      description: dict.ecology.cards[1].description,
       icon: <Leaf className="w-6 h-6" />,
-      status: "700+",
-      tags: ["Dieta", "Dispersión"],
+      status: dict.ecology.cards[1].status,
+      tags: dict.ecology.cards[1].tags,
     },
     {
-      title: "Corredor Biológico",
-      meta: "Guanacaste",
-      description: "Su área de distribución actual se concentra fuertemente en el Área de Conservación Guanacaste, creando un puente genético fundamental entre el bosque seco y los ecosistemas costeros.",
+      title: dict.ecology.cards[2].title,
+      meta: dict.ecology.cards[2].meta,
+      description: dict.ecology.cards[2].description,
       icon: <Map className="w-6 h-6" />,
-      status: "Vital",
-      tags: ["Territorio", "Conservación"],
+      status: dict.ecology.cards[2].status,
+      tags: dict.ecology.cards[2].tags,
       colSpan: 2,
       hasPersistentHover: true,
     }
@@ -42,7 +42,7 @@ export function Ecology({ dict }: EcologyProps) {
     <section id="ecology" className="relative bg-background py-32 lg:py-48 overflow-hidden">
       {/* Background Textural Element */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 font-serif text-[20rem] font-black text-foreground/[0.02] select-none pointer-events-none">
-        Ara
+        {dict.ecology.bg_text}
       </div>
 
       <div className="container mx-auto px-6 lg:px-12">
@@ -54,7 +54,7 @@ export function Ecology({ dict }: EcologyProps) {
                 <div className="flex items-center gap-4">
                   <div className="h-px w-12 bg-primary" />
                   <span className="font-sans text-xs font-bold tracking-[0.4em] text-primary uppercase">
-                    ECOLOGÍA Y HÁBITAT
+                    {dict.ecology.tag}
                   </span>
                 </div>
                 <h2 className="font-serif text-6xl lg:text-8xl leading-[0.9] font-light tracking-tighter text-foreground">
@@ -86,7 +86,7 @@ export function Ecology({ dict }: EcologyProps) {
           <div className="lg:col-span-6 relative order-1 lg:order-2 px-4 lg:px-0 mt-12 lg:mt-0">
             <ParallaxImage
               src="/images/ecology-macaw.png"
-              alt="Lapa Roja en su hábitat"
+              alt={dict.ecology.image_main_alt}
               fill
               priority
               direction="up"
@@ -98,7 +98,7 @@ export function Ecology({ dict }: EcologyProps) {
             {/* Overlapping floating image with Glassmorphism */}
             <ParallaxImage
               src="/images/ecology-forest.png"
-              alt="Bosque Seco de Guanacaste"
+              alt={dict.ecology.image_forest_alt}
               fill
               direction="down"
               speed={20}
@@ -120,10 +120,10 @@ export function Ecology({ dict }: EcologyProps) {
             </div>
             <div className="max-w-5xl mx-auto text-center space-y-12">
               <blockquote className="font-serif text-4xl lg:text-7xl font-light italic text-foreground/95 leading-[1.1] tracking-tight">
-                Su vuelo no es solo un espectáculo de color, es el pulso vital de un ecosistema que se niega a desaparecer.
+                {dict.ecology.quote}
               </blockquote>
               <cite className="block font-sans text-xs font-black uppercase tracking-[0.5em] text-primary">
-                &mdash; Crónica del Bosque Seco
+                {dict.ecology.quote_author}
               </cite>
             </div>
           </div>

@@ -26,12 +26,12 @@ interface FooterProps {
   lang: string;
 }
 
-export function Footer({}: FooterProps) {
+export function Footer({ dict, lang }: FooterProps) {
   return (
     <footer className="bg-background text-foreground pt-32 pb-12 border-t border-border/40 relative overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[25vw] font-black text-foreground/[0.03] pointer-events-none select-none uppercase whitespace-nowrap">
-        Ara Macao
+        {dict.footer.bg_text}
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -41,14 +41,14 @@ export function Footer({}: FooterProps) {
           <div className="lg:col-span-5 space-y-10">
             <ScrollReveal direction="up">
               <div className="space-y-4">
-                <span className="font-sans text-[10px] font-black uppercase tracking-[0.4em] text-accent/60">PROYECTO DE CONSERVACIÓN</span>
+                <span className="font-sans text-[10px] font-black uppercase tracking-[0.4em] text-accent/60">{dict.footer.project_label}</span>
                 <h3 className="font-serif text-5xl lg:text-6xl text-foreground tracking-tighter leading-none">
-                  Símbolo de <br />
-                  <span className="text-accent italic">los Cielos</span>
+                  {dict.footer.brand_prefix} <br />
+                  <span className="text-accent italic">{dict.footer.brand_suffix}</span>
                 </h3>
               </div>
               <p className="font-sans text-xl text-muted-foreground leading-relaxed max-w-md font-light italic">
-                Una iniciativa dedicada a la documentación, protección y divulgación científica de la Lapa Roja en el Corredor Biológico de Guanacaste.
+                {dict.footer.description}
               </p>
               
               <div className="pt-4">
@@ -68,9 +68,9 @@ export function Footer({}: FooterProps) {
           {/* Navigation Links */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-12">
             <ScrollReveal direction="up" delay={0.2} className="space-y-8">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Explorar</h4>
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">{dict.footer.explore_label}</h4>
               <nav className="flex flex-col gap-6">
-                {['Ecología', 'Amenazas', 'Recuperación', 'Avistamiento'].map((item, i) => (
+                {dict.footer.explore_items.map((item, i) => (
                   <Link 
                     key={item}
                     href={`#${['ecology', 'threats', 'recovery', 'sightseeing'][i]}`} 
@@ -84,9 +84,9 @@ export function Footer({}: FooterProps) {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.3} className="space-y-8">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Legal</h4>
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">{dict.footer.legal_label}</h4>
               <nav className="flex flex-col gap-6">
-                {['Privacidad', 'Términos', 'Científicos', 'Prensa'].map((item) => (
+                {dict.footer.legal_items.map((item) => (
                   <Link 
                     key={item}
                     href="#" 
@@ -102,12 +102,11 @@ export function Footer({}: FooterProps) {
           {/* Location / Meta */}
           <div className="lg:col-span-3 space-y-12">
             <ScrollReveal direction="up" delay={0.4} className="space-y-6">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Ubicación</h4>
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">{dict.footer.location_label}</h4>
               <div className="flex gap-4 items-start text-muted-foreground">
                 <MapPin className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <p className="font-sans text-lg font-light leading-snug">
-                  Área de Conservación Guanacaste, <br />
-                  Costa Rica, América Central.
+                  {dict.footer.location_text}
                 </p>
               </div>
             </ScrollReveal>
@@ -134,13 +133,13 @@ export function Footer({}: FooterProps) {
         <div className="pt-12 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-8">
           <ScrollReveal direction="up" delay={0.6}>
             <p className="font-sans text-[11px] font-medium tracking-widest text-foreground/30 uppercase">
-              © {new Date().getFullYear()} Símbolo de los Cielos — Ciencia y Conservación.
+              © {new Date().getFullYear()} {dict.footer.copyright}
             </p>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.7}>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/[0.03] border border-border/40 font-sans text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
-              Hecho con <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> por <span className="text-foreground/60">Guanacaste Digital</span>
+              {dict.footer.made_with} <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> {dict.footer.by} <span className="text-foreground/60">Guanacaste Digital</span>
             </div>
           </ScrollReveal>
         </div>
