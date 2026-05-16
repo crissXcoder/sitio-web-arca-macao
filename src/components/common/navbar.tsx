@@ -58,16 +58,16 @@ export function Navbar({ lang, dict }: NavbarProps) {
         className={`
           container mx-auto max-w-7xl h-20 flex items-center justify-between px-8 rounded-full border transition-all duration-700
           ${isScrolled 
-            ? "bg-[#050505]/80 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] h-16" 
+            ? "bg-background/80 backdrop-blur-2xl border-border/40 shadow-lg h-16" 
             : "bg-transparent border-transparent h-20"}
         `}
       >
         <div className="flex items-center gap-4">
           <Link href={`/${lang}`} className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-              <Bird className="w-6 h-6 text-black" />
+              <Bird className="w-6 h-6 text-accent-foreground" />
             </div>
-            <span className="font-serif text-2xl font-light tracking-tighter text-white">
+            <span className="font-serif text-2xl font-light tracking-tighter text-foreground">
               Símbolo de <span className="text-accent italic">los Cielos</span>
             </span>
           </Link>
@@ -75,12 +75,12 @@ export function Navbar({ lang, dict }: NavbarProps) {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-10">
-          <div className="flex items-center gap-8 pr-8 border-r border-white/10">
+          <div className="flex items-center gap-8 pr-8 border-r border-border/40">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-sans text-[11px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-accent transition-colors duration-300"
+                className="font-sans text-[11px] font-black uppercase tracking-[0.3em] text-muted-foreground hover:text-accent transition-colors duration-300"
               >
                 {item.name}
               </Link>
@@ -90,7 +90,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
             <LanguageSwitcher currentLang={lang} />
             <ThemeToggle />
             <Button 
-              className="rounded-full bg-white text-black hover:bg-accent hover:text-black transition-all duration-500 px-8 font-black uppercase text-[10px] tracking-[0.2em]"
+              className="rounded-full bg-foreground text-background hover:bg-accent hover:text-accent-foreground transition-all duration-500 px-8 font-black uppercase text-[10px] tracking-[0.2em]"
             >
               Documentación
             </Button>
@@ -102,11 +102,11 @@ export function Navbar({ lang, dict }: NavbarProps) {
           <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-12 w-12 rounded-full border border-white/5 bg-white/[0.02]">
-                <Menu className="h-6 w-6 text-white" />
+              <Button variant="ghost" size="icon" className="h-12 w-12 rounded-full border border-border/40 bg-card/40">
+                <Menu className="h-6 w-6 text-foreground" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[400px] bg-[#050505] border-white/5 text-white">
+            <SheetContent side="right" className="w-full sm:w-[400px] bg-background border-border text-foreground">
               <SheetHeader className="text-left mb-16">
                 <SheetTitle className="font-serif text-3xl font-light">
                   Símbolo de <span className="text-accent italic">los Cielos</span>
@@ -117,18 +117,18 @@ export function Navbar({ lang, dict }: NavbarProps) {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="font-serif text-5xl font-light text-white/50 hover:text-accent transition-all duration-300 tracking-tighter"
+                    className="font-serif text-5xl font-light text-muted-foreground hover:text-accent transition-all duration-300 tracking-tighter"
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="pt-12 border-t border-white/5 mt-12 flex flex-col gap-8">
+                <div className="pt-12 border-t border-border mt-12 flex flex-col gap-8">
                   <div className="flex items-center justify-between">
-                    <span className="font-sans text-[10px] font-black uppercase tracking-widest text-white/30">Idioma</span>
+                    <span className="font-sans text-[10px] font-black uppercase tracking-widest text-muted-foreground/70">Idioma</span>
                     <LanguageSwitcher currentLang={lang} />
                   </div>
                   <Button 
-                    className="rounded-full bg-white text-black h-16 text-lg font-serif italic"
+                    className="rounded-full bg-foreground text-background h-16 text-lg font-serif italic"
                   >
                     Ver Documentación
                   </Button>

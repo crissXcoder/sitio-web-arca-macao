@@ -16,9 +16,9 @@ interface ThreatItem {
 export function Threats({ dict }: ThreatsProps) {
   return (
     <ColorRevealSection 
-      targetColorHex="#0a0a0a" 
+      targetColorHex="var(--color-muted)" 
       triggerStart="top 60%"
-      className="relative bg-[#111111] py-32 lg:py-48 overflow-hidden text-white"
+      className="relative bg-background py-32 lg:py-48 overflow-hidden text-foreground"
     >
       <div id="threats" className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-start">
@@ -32,17 +32,17 @@ export function Threats({ dict }: ThreatsProps) {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-border/40" />
             </ImageColorReveal>
 
             {/* Overlapping Detail Box - Premium Glassmorphism */}
-            <ScrollReveal direction="up" delay={0.2} className="absolute -bottom-16 right-0 lg:-right-16 bg-white/5 backdrop-blur-2xl p-10 lg:p-16 max-w-lg border border-white/10 shadow-2xl z-10">
+            <ScrollReveal direction="up" delay={0.2} className="absolute -bottom-16 right-0 lg:-right-16 bg-card/40 backdrop-blur-2xl p-10 lg:p-16 max-w-lg border border-border/40 shadow-2xl z-10">
               <div className="space-y-6">
                 <span className="inline-block px-3 py-1 bg-accent/20 border border-accent/30 text-accent font-sans text-[10px] font-black uppercase tracking-[0.3em]">
                   Impacto Crítico
                 </span>
-                <p className="font-serif text-3xl lg:text-4xl text-white font-light leading-tight italic">
+                <p className="font-serif text-3xl lg:text-4xl text-foreground font-light leading-tight italic">
                   &quot;Cada árbol caído es un nido menos, una generación perdida en el eco del bosque.&quot;
                 </p>
                 <div className="h-px w-20 bg-accent/50" />
@@ -58,18 +58,18 @@ export function Threats({ dict }: ThreatsProps) {
                   <span className="font-sans text-xs font-black tracking-[0.5em] text-accent uppercase">
                     AMENAZAS ACTUALES
                   </span>
-                  <h2 className="font-serif text-6xl lg:text-8xl leading-[0.9] font-light tracking-tighter text-white">
+                  <h2 className="font-serif text-6xl lg:text-8xl leading-[0.9] font-light tracking-tighter text-foreground">
                     {dict.threats.title}
                   </h2>
                 </div>
-                <p className="font-sans text-xl text-white/60 leading-relaxed font-light">
+                <p className="font-sans text-xl text-muted-foreground leading-relaxed font-light">
                   {dict.threats.content}
                 </p>
               </div>
             </ScrollReveal>
 
             {/* Threat List - Refined Design */}
-            <div className="space-y-12 pt-12 border-t border-white/5">
+            <div className="space-y-12 pt-12 border-t border-border/40">
               {Object.entries(dict.threats.items).map(([key, item]: [string, ThreatItem], index) => (
                 <ScrollReveal key={key} direction="up" delay={index * 0.15}>
                   <div className="group flex gap-8 items-start">
@@ -78,10 +78,10 @@ export function Threats({ dict }: ThreatsProps) {
                       <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans text-[10px] font-black text-accent">{key.padStart(2, '0')}</span>
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-sans text-sm font-black uppercase tracking-[0.2em] text-white/90 group-hover:text-accent transition-colors duration-500">
+                      <h3 className="font-sans text-sm font-black uppercase tracking-[0.2em] text-foreground/90 group-hover:text-accent transition-colors duration-500">
                         {item.title}
                       </h3>
-                      <p className="font-sans text-base text-white/40 leading-relaxed group-hover:text-white/60 transition-colors duration-500">
+                      <p className="font-sans text-base text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-500">
                         {item.description}
                       </p>
                     </div>
@@ -94,7 +94,7 @@ export function Threats({ dict }: ThreatsProps) {
       </div>
 
       {/* Abstract Danger Decor */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 font-serif text-[30vw] font-black text-white/[0.01] pointer-events-none select-none uppercase">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 font-serif text-[30vw] font-black text-foreground/[0.03] pointer-events-none select-none uppercase">
         Crisis
       </div>
     </ColorRevealSection>

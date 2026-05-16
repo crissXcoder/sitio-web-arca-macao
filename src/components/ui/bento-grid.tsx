@@ -27,8 +27,8 @@ export function BentoGrid({ items, className }: BentoGridProps) {
                     key={index}
                     className={cn(
                         "group relative p-6 rounded-2xl overflow-hidden transition-all duration-500",
-                        "border border-border/10 bg-background/5 backdrop-blur-xl",
-                        "hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:border-primary/20",
+                        "border border-border/30 bg-foreground/[0.03] backdrop-blur-xl",
+                        "hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:border-primary/30",
                         "hover:-translate-y-1 will-change-transform",
                         item.colSpan || "col-span-1",
                         item.colSpan === 2 ? "md:col-span-2" : "",

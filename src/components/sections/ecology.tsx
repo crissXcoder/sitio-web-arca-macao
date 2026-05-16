@@ -48,7 +48,7 @@ export function Ecology({ dict }: EcologyProps) {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           {/* Text Content */}
-          <div className="lg:col-span-5 space-y-12 order-2 lg:order-1">
+          <div className="lg:col-span-6 space-y-12 order-2 lg:order-1">
             <ScrollReveal direction="up" delay={0.2}>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -77,13 +77,13 @@ export function Ecology({ dict }: EcologyProps) {
             {/* Premium Data Points using Bento Grid */}
             <ScrollReveal direction="up" delay={0.6}>
               <div className="pt-8">
-                <BentoGrid items={bentoItems} className="max-w-full" />
+                <BentoGrid items={bentoItems} className="max-w-full lg:grid-cols-2" />
               </div>
             </ScrollReveal>
           </div>
 
           {/* Image Composition with Parallax Wrappers */}
-          <div className="lg:col-span-7 relative order-1 lg:order-2 px-4 lg:px-0 mt-12 lg:mt-0">
+          <div className="lg:col-span-6 relative order-1 lg:order-2 px-4 lg:px-0 mt-12 lg:mt-0">
             <ParallaxImage
               src="/images/ecology-macaw.png"
               alt="Lapa Roja en su hábitat"
