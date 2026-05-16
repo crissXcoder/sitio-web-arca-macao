@@ -7,6 +7,7 @@ import { Threats } from "@/components/sections/threats";
 import { Recovery } from "@/components/sections/recovery";
 import { Sightseeing } from "@/components/sections/sightseeing";
 import { Footer } from "@/components/layout/footer";
+import FlowArt, { FlowSection } from "@/components/story-scroll";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -20,13 +21,23 @@ export default async function Page({ params }: PageProps) {
     <div className="relative flex min-h-screen flex-col">
       <Navbar lang={lang} dict={dict} />
       <main className="flex-1">
-        <Hero dict={dict} />
-        <Ecology dict={dict} />
-        <Threats dict={dict} />
-        <Recovery dict={dict} />
-        <Sightseeing dict={dict} />
+        <FlowArt>
+          <Hero dict={dict} />
+          <FlowSection aria-label="Ecology Section">
+            <Ecology dict={dict} />
+          </FlowSection>
+          <FlowSection aria-label="Threats Section">
+            <Threats dict={dict} />
+          </FlowSection>
+          <FlowSection aria-label="Recovery Section">
+            <Recovery dict={dict} />
+          </FlowSection>
+          <FlowSection aria-label="Sightseeing Section">
+            <Sightseeing dict={dict} />
+          </FlowSection>
+        </FlowArt>
       </main>
-      
+
       <Footer dict={dict} lang={lang} />
     </div>
   );

@@ -48,7 +48,7 @@ export function Sightseeing({ dict }: SightseeingProps) {
           <ScrollReveal direction="up">
             <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-[10px] font-black uppercase tracking-[0.3em] mb-6">
               <Eye className="w-3 h-3" aria-hidden="true" />
-              Observación Ética
+              {dict.sightseeing.tag}
             </div>
             <h2 className="font-serif text-6xl lg:text-9xl leading-[0.85] font-light tracking-tighter mb-8">
               {dict.sightseeing.title}
@@ -70,9 +70,9 @@ export function Sightseeing({ dict }: SightseeingProps) {
               
               <div className="space-y-12 relative z-10">
                 <div className="space-y-2">
-                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-accent/60">PRÁCTICAS RECOMENDADAS</span>
+                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-accent/60">{dict.sightseeing.dos_tag}</span>
                   <h3 className="font-serif text-4xl text-accent flex items-center gap-4">
-                    Conducta Ética
+                    {dict.sightseeing.dos_title}
                   </h3>
                 </div>
                 
@@ -99,9 +99,9 @@ export function Sightseeing({ dict }: SightseeingProps) {
               
               <div className="space-y-12 relative z-10">
                 <div className="space-y-2">
-                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-red-500/60">ACCIONES A EVITAR</span>
+                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-red-500/60">{dict.sightseeing.donts_tag}</span>
                   <h3 className="font-serif text-4xl text-red-400 flex items-center gap-4">
-                    Impactos Negativos
+                    {dict.sightseeing.donts_title}
                   </h3>
                 </div>
                 
@@ -134,8 +134,8 @@ export function Sightseeing({ dict }: SightseeingProps) {
               </div>
               <div className="md:col-span-10 space-y-6">
                 <div className="space-y-2">
-                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-accent/60">NUESTRO COMPROMISO</span>
-                  <h4 className="font-serif text-4xl lg:text-5xl text-foreground font-light">Responsabilidad en Guanacaste</h4>
+                  <span className="font-sans text-[10px] font-black uppercase tracking-[0.3em] text-accent/60">{dict.sightseeing.commitment_tag}</span>
+                  <h4 className="font-serif text-4xl lg:text-5xl text-foreground font-light">{dict.sightseeing.commitment_title}</h4>
                 </div>
                 <p className="font-sans text-xl text-muted-foreground leading-relaxed font-light italic">
                   {dict.sightseeing.content}
@@ -145,7 +145,7 @@ export function Sightseeing({ dict }: SightseeingProps) {
             
             {/* Abstract Background Text */}
             <div className="absolute bottom-0 right-0 font-serif text-[15vw] font-black text-foreground/[0.02] pointer-events-none select-none uppercase leading-none translate-y-1/2 translate-x-1/4">
-              Ethos
+              {dict.sightseeing.bg_text}
             </div>
           </div>
         </ScrollReveal>

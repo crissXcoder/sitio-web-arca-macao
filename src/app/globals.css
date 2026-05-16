@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
@@ -36,42 +38,42 @@
   :root {
     --background: hsl(45 20% 98%);
     --foreground: hsl(20 14% 12%);
-    
+
     --primary: hsl(12 76% 51%); /* Ara Scarlet */
     --primary-foreground: hsl(45 20% 98%);
-    
+
     --secondary: hsl(205 85% 45%); /* Ara Blue */
     --secondary-foreground: hsl(45 20% 98%);
-    
+
     --accent: hsl(48 95% 48%); /* Ara Yellow */
     --accent-foreground: hsl(20 14% 12%);
-    
+
     --muted: hsl(45 10% 90%);
     --muted-foreground: hsl(20 10% 40%);
-    
+
     --border: hsl(20 10% 88%);
     --input: hsl(20 10% 88%);
     --ring: hsl(12 76% 51%);
-    
+
     --radius: 0.5rem;
   }
 
   .dark {
     --background: hsl(20 14% 6%);
     --foreground: hsl(45 10% 95%);
-    
+
     --primary: hsl(12 76% 51%);
     --primary-foreground: hsl(45 20% 98%);
-    
+
     --secondary: hsl(205 85% 40%);
     --secondary-foreground: hsl(45 20% 98%);
-    
+
     --accent: hsl(48 95% 45%);
     --accent-foreground: hsl(20 14% 6%);
-    
+
     --muted: hsl(20 14% 12%);
     --muted-foreground: hsl(20 10% 70%);
-    
+
     --border: hsl(20 14% 15%);
     --input: hsl(20 14% 15%);
     --ring: hsl(12 76% 51%);
@@ -82,11 +84,11 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .glass {
     @apply bg-background/70 backdrop-blur-md border border-foreground/10;
   }
-  
+
   .vertical-lr {
     writing-mode: vertical-lr;
   }
@@ -103,7 +105,7 @@
   body {
     @apply bg-background text-foreground font-sans selection:bg-primary/30;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight;
   }
@@ -133,4 +135,12 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  --font-sans: var(----font-sans);
 }

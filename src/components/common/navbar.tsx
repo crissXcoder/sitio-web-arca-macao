@@ -68,7 +68,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
               <Bird className="w-6 h-6 text-accent-foreground" />
             </div>
             <span className="font-serif text-2xl font-light tracking-tighter text-foreground">
-              Símbolo de <span className="text-accent italic">los Cielos</span>
+              {dict.nav.brand_prefix}<span className="text-accent italic">{dict.nav.brand_suffix}</span>
             </span>
           </Link>
         </div>
@@ -92,7 +92,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
             <Button 
               className="rounded-full bg-foreground text-background hover:bg-accent hover:text-accent-foreground transition-all duration-500 px-8 font-black uppercase text-[10px] tracking-[0.2em]"
             >
-              Documentación
+              {dict.nav.docs}
             </Button>
           </div>
         </nav>
@@ -109,7 +109,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
             <SheetContent side="right" className="w-full sm:w-[400px] bg-background border-border text-foreground">
               <SheetHeader className="text-left mb-16">
                 <SheetTitle className="font-serif text-3xl font-light">
-                  Símbolo de <span className="text-accent italic">los Cielos</span>
+                  {dict.nav.brand_prefix}<span className="text-accent italic">{dict.nav.brand_suffix}</span>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-8">
@@ -124,13 +124,13 @@ export function Navbar({ lang, dict }: NavbarProps) {
                 ))}
                 <div className="pt-12 border-t border-border mt-12 flex flex-col gap-8">
                   <div className="flex items-center justify-between">
-                    <span className="font-sans text-[10px] font-black uppercase tracking-widest text-muted-foreground/70">Idioma</span>
+                    <span className="font-sans text-[10px] font-black uppercase tracking-widest text-muted-foreground/70">{dict.nav.language}</span>
                     <LanguageSwitcher currentLang={lang} />
                   </div>
                   <Button 
                     className="rounded-full bg-foreground text-background h-16 text-lg font-serif italic"
                   >
-                    Ver Documentación
+                    {dict.nav.view_docs}
                   </Button>
                 </div>
               </div>
@@ -141,3 +141,4 @@ export function Navbar({ lang, dict }: NavbarProps) {
     </div>
   );
 }
+
