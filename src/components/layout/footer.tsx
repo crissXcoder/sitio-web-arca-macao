@@ -28,9 +28,9 @@ interface FooterProps {
 
 export function Footer({}: FooterProps) {
   return (
-    <footer className="bg-[#050505] text-white pt-32 pb-12 border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-background text-foreground pt-32 pb-12 border-t border-border/40 relative overflow-hidden">
       {/* Decorative Background Text */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[25vw] font-black text-white/[0.02] pointer-events-none select-none uppercase whitespace-nowrap">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[25vw] font-black text-foreground/[0.03] pointer-events-none select-none uppercase whitespace-nowrap">
         Ara Macao
       </div>
 
@@ -42,21 +42,21 @@ export function Footer({}: FooterProps) {
             <ScrollReveal direction="up">
               <div className="space-y-4">
                 <span className="font-sans text-[10px] font-black uppercase tracking-[0.4em] text-accent/60">PROYECTO DE CONSERVACIÓN</span>
-                <h3 className="font-serif text-5xl lg:text-6xl text-white tracking-tighter leading-none">
+                <h3 className="font-serif text-5xl lg:text-6xl text-foreground tracking-tighter leading-none">
                   Símbolo de <br />
                   <span className="text-accent italic">los Cielos</span>
                 </h3>
               </div>
-              <p className="font-sans text-xl text-white/40 leading-relaxed max-w-md font-light italic">
+              <p className="font-sans text-xl text-muted-foreground leading-relaxed max-w-md font-light italic">
                 Una iniciativa dedicada a la documentación, protección y divulgación científica de la Lapa Roja en el Corredor Biológico de Guanacaste.
               </p>
               
               <div className="pt-4">
                 <Link 
                   href="mailto:info@laparoja.cr" 
-                  className="group flex items-center gap-4 text-white/80 hover:text-accent transition-colors duration-500"
+                  className="group flex items-center gap-4 text-foreground/80 hover:text-accent transition-colors duration-500"
                 >
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-accent/40 group-hover:bg-accent/5 transition-all">
+                  <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:border-accent/40 group-hover:bg-accent/5 transition-all">
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="font-serif text-2xl tracking-tight">info@laparoja.cr</span>
@@ -68,13 +68,13 @@ export function Footer({}: FooterProps) {
           {/* Navigation Links */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-12">
             <ScrollReveal direction="up" delay={0.2} className="space-y-8">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-white/30">Explorar</h4>
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Explorar</h4>
               <nav className="flex flex-col gap-6">
                 {['Ecología', 'Amenazas', 'Recuperación', 'Avistamiento'].map((item, i) => (
                   <Link 
                     key={item}
                     href={`#${['ecology', 'threats', 'recovery', 'sightseeing'][i]}`} 
-                    className="font-serif text-xl text-white/50 hover:text-accent transition-all duration-300 flex items-center justify-between group"
+                    className="font-serif text-xl text-muted-foreground hover:text-accent transition-all duration-300 flex items-center justify-between group"
                   >
                     {item}
                     <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
@@ -84,13 +84,13 @@ export function Footer({}: FooterProps) {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.3} className="space-y-8">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-white/30">Legal</h4>
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Legal</h4>
               <nav className="flex flex-col gap-6">
                 {['Privacidad', 'Términos', 'Científicos', 'Prensa'].map((item) => (
                   <Link 
                     key={item}
                     href="#" 
-                    className="font-serif text-xl text-white/50 hover:text-accent transition-all duration-300"
+                    className="font-serif text-xl text-muted-foreground hover:text-accent transition-all duration-300"
                   >
                     {item}
                   </Link>
@@ -102,8 +102,8 @@ export function Footer({}: FooterProps) {
           {/* Location / Meta */}
           <div className="lg:col-span-3 space-y-12">
             <ScrollReveal direction="up" delay={0.4} className="space-y-6">
-              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-white/30">Ubicación</h4>
-              <div className="flex gap-4 items-start text-white/50">
+              <h4 className="font-sans font-black uppercase tracking-[0.3em] text-[10px] text-foreground/30">Ubicación</h4>
+              <div className="flex gap-4 items-start text-muted-foreground">
                 <MapPin className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <p className="font-sans text-lg font-light leading-snug">
                   Área de Conservación Guanacaste, <br />
@@ -120,7 +120,7 @@ export function Footer({}: FooterProps) {
                 <Link 
                   key={i}
                   href={social.href} 
-                  className="w-14 h-14 rounded-full border border-white/5 bg-white/[0.02] flex items-center justify-center hover:bg-accent hover:text-black hover:border-accent transition-all duration-500 transform hover:-translate-y-1"
+                  className="w-14 h-14 rounded-full border border-border/40 bg-foreground/[0.02] flex items-center justify-center hover:bg-accent hover:text-black hover:border-accent transition-all duration-500 transform hover:-translate-y-1"
                 >
                   {social.icon}
                 </Link>
@@ -131,16 +131,16 @@ export function Footer({}: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-12 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-8">
           <ScrollReveal direction="up" delay={0.6}>
-            <p className="font-sans text-[11px] font-medium tracking-widest text-white/20 uppercase">
+            <p className="font-sans text-[11px] font-medium tracking-widest text-foreground/30 uppercase">
               © {new Date().getFullYear()} Símbolo de los Cielos — Ciencia y Conservación.
             </p>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.7}>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 font-sans text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
-              Hecho con <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> por <span className="text-white/60">Guanacaste Digital</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/[0.03] border border-border/40 font-sans text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+              Hecho con <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> por <span className="text-foreground/60">Guanacaste Digital</span>
             </div>
           </ScrollReveal>
         </div>
