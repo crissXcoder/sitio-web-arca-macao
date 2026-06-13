@@ -1,5 +1,6 @@
 {
   "nav": {
+    "campaign": "Campaign",
     "ecology": "Ecology",
     "threats": "Threats",
     "recovery": "Recovery",
@@ -152,14 +153,21 @@
     "brand_suffix": "the Skies",
     "description": "An initiative dedicated to the documentation, protection, and scientific dissemination of the Scarlet Macaw in the Guanacaste Biological Corridor.",
     "explore_label": "Explore",
-    "explore_items": ["Ecology", "Threats", "Recovery", "Sighting"],
+    "explore_items": ["Campaign", "Ecology", "Threats", "Recovery", "Sighting"],
     "legal_label": "Legal",
     "legal_items": ["Privacy", "Terms", "Scientific", "Press"],
     "location_label": "Location",
     "location_text": "Guanacaste Conservation Area, Costa Rica, Central America.",
     "copyright": "Symbol of the Skies — Science & Conservation.",
     "made_with": "Made with",
-    "by": "by"
+    "by": "by",
+    "newsletter_title": "Join the Conservation",
+    "newsletter_placeholder": "Your email address",
+    "newsletter_button": "Subscribe",
+    "newsletter_success": "Successfully joined!",
+    "newsletter_invalid": "Invalid email",
+    "widget_time_label": "Local Time",
+    "widget_gmt": "Costa Rica (GMT-6)"
   },
   "infographics": {
     "tag": "Visual Resources",
@@ -185,6 +193,93 @@
     "conservation": {
       "title": "Habitat and conservation in the dry tropics",
       "summary": "The Ara macao inhabits the tropical dry forests of the Pacific of Costa Rica, where it depends on large trees for nesting and a wide variety of fruits and seeds for feeding. Although its populations have recovered in some areas thanks to conservation efforts, it still faces threats such as habitat loss, logging of nesting trees, and illegal wildlife trafficking. Forest protection, reforestation with native species, and nest monitoring are fundamental actions to guarantee its survival."
+    }
+  },
+  "campaign": {
+    "tag": "Conservation Campaign",
+    "title": "Red Wings, Green Future",
+    "subtitle": "Uniting science, education, and community to restore the scarlet macaw and protect the tropical dry forest.",
+    "bg_text": "Campaign",
+    "tabs": {
+      "mission": "The Campaign",
+      "census": "Distribution & Status",
+      "botany": "Botanical Dependency"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "rector_title": "Campaign Core Message",
+      "rector_text": "\"If we protect the scarlet macaw, we protect the life of the forest, because it is part of it and it depends on us to care for them.\"",
+      "description": "The \"Red Wings, Green Future\" campaign, developed by the UNA Chorotega research team, seeks to bridge the cognitive gap between specialized research and civil society. We position the Ara macao as an \"umbrella species\" whose conservation collaterally protects the entire biome.",
+      "umbrella_title": "What is an Umbrella Species?",
+      "umbrella_desc": "By protecting the immense territory that a pair of macaws needs to survive and the mature forests where they nest, we indirectly protect the habitat of thousands of insects, plants, and smaller birds that share their ecosystem."
+    },
+    "census": {
+      "title": "Population Status in Costa Rica",
+      "desc": "Contemporary analysis of the census and genetic viability of Ara macao in the national territory:",
+      "regions": [
+        {
+          "name": "Osa Peninsula",
+          "meta": "South Pacific",
+          "count": "> 1000",
+          "label": "Wild individuals",
+          "status": "Viable & Healthy",
+          "desc": "It constitutes the largest viable wild population and the one with the highest genetic diversity in the country."
+        },
+        {
+          "name": "Central Pacific",
+          "meta": "Carara / Tarcoles",
+          "count": "~ 600",
+          "label": "Wild individuals",
+          "status": "Threatened by Tourism",
+          "desc": "Viable population but under strong pressure from landscape fragmentation and coastal development."
+        },
+        {
+          "name": "Guanacaste Region",
+          "meta": "Punta Islita / Nandayure",
+          "count": "Reintroduced",
+          "label": "Constant Monitoring",
+          "status": "Conservation Dependent",
+          "desc": "Populations successfully reintroduced by the Macaw Recovery Network. They rely on artificial nests and active protection."
+        },
+        {
+          "name": "Other Relict Zones",
+          "meta": "Rest of the Country",
+          "count": "5 - 20 pairs",
+          "label": "Isolated pairs",
+          "status": "Extreme Genetic Risk",
+          "desc": "Small remaining isolated nuclei, lacking long-term viability without the development of biological corridors."
+        }
+      ]
+    },
+    "botany": {
+      "title": "The Canopy Food Source: Critical Forest",
+      "desc": "The conservation of the scarlet macaw is inseparable from the protection of the botanical species of the dry forest. These four species sustain its life cycle:",
+      "trees": [
+        {
+          "name": "Pochote",
+          "scientific": "Bombacopsis quinata",
+          "role": "Centenary Cradles",
+          "desc": "Its immense diameter and slow-growing wood provide the natural nesting cavities that are indispensable for chicks."
+        },
+        {
+          "name": "Jiñote",
+          "scientific": "Bursera simaruba",
+          "role": "Drought Support",
+          "desc": "Known as 'naked Indian', it provides essential fruits and seeds during the driest months of the seasonal transition."
+        },
+        {
+          "name": "Madero Negro",
+          "scientific": "Gliricidia sepium",
+          "role": "Canopy Protein",
+          "desc": "Its leaves, pods, and seeds represent a concentrated, highly proteinaceous source of nutrition for growing chicks."
+        },
+        {
+          "name": "Jobo",
+          "scientific": "Spondias mombin",
+          "role": "Pulp & Hydration",
+          "desc": "It produces fleshy fruits that provide hydration and caloric intake for pairs during the hot dry summer."
+        }
+      ]
     }
   }
 }

@@ -7,6 +7,7 @@ import { Threats } from "@/components/sections/threats";
 import { Recovery } from "@/components/sections/recovery";
 import { Sightseeing } from "@/components/sections/sightseeing";
 import { Infographics } from "@/components/sections/infographics";
+import { CampaignSection } from "@/components/sections/campaign-section";
 import { Footer } from "@/components/layout/footer";
 import FlowArt, { FlowSection } from "@/components/story-scroll";
 
@@ -52,6 +53,9 @@ export default async function Page({ params }: PageProps) {
       <main className="flex-1">
         <FlowArt>
           <Hero dict={dict} />
+          <FlowSection aria-label="Campaign Section">
+            <CampaignSection dict={dict} />
+          </FlowSection>
           <FlowSection aria-label="Ecology Section">
             <Ecology dict={dict} />
           </FlowSection>

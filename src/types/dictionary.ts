@@ -1,5 +1,6 @@
 export interface Dictionary {
   nav: {
+    campaign: string;
     ecology: string;
     threats: string;
     recovery: string;
@@ -112,6 +113,13 @@ export interface Dictionary {
     copyright: string;
     made_with: string;
     by: string;
+    newsletter_title: string;
+    newsletter_placeholder: string;
+    newsletter_button: string;
+    newsletter_success: string;
+    newsletter_invalid: string;
+    widget_time_label: string;
+    widget_gmt: string;
   };
   infographics: {
     tag: string;
@@ -132,6 +140,47 @@ export interface Dictionary {
     conservation: {
       title: string;
       summary: string;
+    };
+  };
+  campaign: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    bg_text: string;
+    tabs: {
+      mission: string;
+      census: string;
+      botany: string;
+    };
+    mission: {
+      title: string;
+      rector_title: string;
+      rector_text: string;
+      description: string;
+      umbrella_title: string;
+      umbrella_desc: string;
+    };
+    census: {
+      title: string;
+      desc: string;
+      regions: Array<{
+        name: string;
+        meta: string;
+        count: string;
+        label: string;
+        status: string;
+        desc: string;
+      }>;
+    };
+    botany: {
+      title: string;
+      desc: string;
+      trees: Array<{
+        name: string;
+        scientific: string;
+        role: string;
+        desc: string;
+      }>;
     };
   };
 }
