@@ -39,7 +39,7 @@ export function Ecology({ dict }: EcologyProps) {
   ];
 
   return (
-    <section id="ecology" className="relative bg-background py-32 lg:py-48 overflow-hidden">
+    <section id="ecology" className="relative bg-background py-40 lg:py-56 overflow-hidden">
       {/* Background Textural Element */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 font-serif text-[20rem] font-black text-foreground/[0.02] select-none pointer-events-none">
         {dict.ecology.bg_text}

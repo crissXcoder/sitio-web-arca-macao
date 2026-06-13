@@ -227,9 +227,7 @@ export function Footer({ dict, lang }: FooterProps) {
             {/* Social Links */}
             <ScrollReveal direction="up" delay={0.5} className="flex gap-4">
               {[
-                { icon: <GithubIcon className="w-4 h-4" />, href: "#" },
-                { icon: <Globe className="w-4 h-4" />, href: "#" },
-                { icon: <Mail className="w-4 h-4" />, href: "mailto:info@laparoja.cr" }
+                { icon: <GithubIcon className="w-4 h-4" />, href: "https://github.com/crissXcoder" }
               ].map((social, i) => (
                 <Link 
                   key={i}
@@ -255,7 +253,7 @@ export function Footer({ dict, lang }: FooterProps) {
           
           <ScrollReveal direction="up" delay={0.6}>
             <div className="flex items-center gap-2 px-4 py-2 bg-foreground/[0.02] border border-border/15 font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground rounded-none">
-              {dict.footer.made_with} <Heart className="w-3 h-3 text-rose-600 fill-rose-600 animate-pulse" /> {dict.footer.by} <span className="text-foreground/80">Guanacaste Digital & UNA</span>
+              {dict.footer.made_with} <Heart className="w-3 h-3 text-rose-600 fill-rose-600 animate-pulse" /> {dict.footer.by} <span className="text-foreground/80">Estudiantes de la UNA</span>
             </div>
           </ScrollReveal>
 

@@ -8,7 +8,7 @@ interface CampaignSectionProps {
 
 export function CampaignSection({ dict }: CampaignSectionProps) {
   return (
-    <section id="campaign" className="relative bg-background py-32 lg:py-48 overflow-hidden border-t border-border/20">
+    <section id="campaign" className="relative bg-background py-40 lg:py-56 overflow-hidden border-t border-border/20">
       {/* Background Watermark (Scientific documentary editorial) */}
       <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-12 font-serif text-[24rem] font-black text-foreground/[0.01] select-none pointer-events-none uppercase">
         {dict.campaign.bg_text}

@@ -77,7 +77,7 @@ export function Infographics({ dict }: InfographicsProps) {
   ];
 
   return (
-    <section id="resources" className="relative bg-background py-32 lg:py-48 overflow-hidden border-t border-border/20">
+    <section id="resources" className="relative bg-background py-40 lg:py-56 overflow-hidden border-t border-border/20">
       {/* Background Watermark */}
       <div className="absolute top-0 left-0 -translate-y-1/3 -translate-x-10 font-serif text-[24rem] font-black text-foreground/[0.01] select-none pointer-events-none uppercase">
         {dict.infographics.bg_text}

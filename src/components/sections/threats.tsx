@@ -18,7 +18,7 @@ export function Threats({ dict }: ThreatsProps) {
     <ColorRevealSection 
       targetColorHex="var(--color-muted)" 
       triggerStart="top 60%"
-      className="relative bg-background py-32 lg:py-48 overflow-hidden text-foreground"
+      className="relative bg-background py-40 lg:py-56 overflow-hidden text-foreground"
     >
       <div id="threats" className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 items-start">
@@ -37,7 +37,7 @@ export function Threats({ dict }: ThreatsProps) {
             </ImageColorReveal>
 
             {/* Overlapping Detail Box - Premium Glassmorphism */}
-            <ScrollReveal direction="up" delay={0.2} className="absolute -bottom-16 right-0 lg:-right-16 bg-card/40 backdrop-blur-2xl p-10 lg:p-16 max-w-lg border border-border/40 shadow-2xl z-10">
+            <ScrollReveal direction="up" delay={0.2} className="absolute -bottom-8 right-0 lg:-right-16 bg-card/40 backdrop-blur-2xl p-10 lg:p-16 max-w-lg border border-border/40 shadow-2xl z-10">
               <div className="space-y-6">
                 <span className="inline-block px-3 py-1 bg-accent/20 border border-accent/30 text-accent font-sans text-[10px] font-black uppercase tracking-[0.3em]">
                   {dict.threats.impact_tag}

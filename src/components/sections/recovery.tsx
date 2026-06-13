@@ -15,7 +15,7 @@ interface RecoveryStat {
 
 export function Recovery({ dict }: RecoveryProps) {
   return (
-    <section id="recovery" className="py-32 lg:py-48 bg-background relative overflow-hidden">
+    <section id="recovery" className="py-40 lg:py-56 bg-background relative overflow-hidden">
       {/* Decorative Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none text-foreground" 
            style={{ backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

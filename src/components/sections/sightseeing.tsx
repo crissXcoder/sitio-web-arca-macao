@@ -33,7 +33,7 @@ export function Sightseeing({ dict }: SightseeingProps) {
   }, []);
 
   return (
-    <section id="sightseeing" ref={sectionRef} className="py-32 lg:py-48 bg-background relative overflow-hidden text-foreground">
+    <section id="sightseeing" ref={sectionRef} className="py-40 lg:py-56 bg-background relative overflow-hidden text-foreground">
       {/* Immersive Background Decor */}
       <div 
         ref={bgRef}
