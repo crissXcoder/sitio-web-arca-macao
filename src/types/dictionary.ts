@@ -113,6 +113,27 @@ export interface Dictionary {
     made_with: string;
     by: string;
   };
+  infographics: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    bg_text: string;
+    download_btn: string;
+    view_btn: string;
+    close_btn: string;
+    anatomy: {
+      title: string;
+      summary: string;
+      steps_title: string;
+      steps: string[];
+      details_title: string;
+      details: string;
+    };
+    conservation: {
+      title: string;
+      summary: string;
+    };
+  };
 }
 
 export type Locale = "es" | "en";

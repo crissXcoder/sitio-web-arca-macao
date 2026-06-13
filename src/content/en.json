@@ -160,6 +160,32 @@
     "copyright": "Symbol of the Skies — Science & Conservation.",
     "made_with": "Made with",
     "by": "by"
+  },
+  "infographics": {
+    "tag": "Visual Resources",
+    "title": "Scientific Documentation",
+    "subtitle": "Infographics and educational materials for outreach and conservation.",
+    "bg_text": "Resources",
+    "download_btn": "Download PNG",
+    "view_btn": "View Fullscreen",
+    "close_btn": "Close",
+    "anatomy": {
+      "title": "Beak anatomy of the scarlet macaw (Ara macao)",
+      "summary": "The beak of the scarlet macaw is large, strong, and curved, adapted to break hard-shelled seeds and fruits. It is formed by a bone structure covered in keratin, a resistant material that protects the beak from wear.",
+      "steps_title": "Hard seed processing:",
+      "steps": [
+        "Holds the seed with the beak and, occasionally, with one of its feet.",
+        "Applies pressure using its powerful mandibular muscles.",
+        "Fractures the shell thanks to the curved and robust shape of the beak.",
+        "Extracts and consumes the nutritious content, discarding the remains."
+      ],
+      "details_title": "Adaptive strength and musculature",
+      "details": "The scarlet macaw possesses highly developed mandibular muscles that generate a great bite force. This specialized adaptation represents an evolutionary advantage to exploit food resources that other birds cannot consume."
+    },
+    "conservation": {
+      "title": "Habitat and conservation in the dry tropics",
+      "summary": "The Ara macao inhabits the tropical dry forests of the Pacific of Costa Rica, where it depends on large trees for nesting and a wide variety of fruits and seeds for feeding. Although its populations have recovered in some areas thanks to conservation efforts, it still faces threats such as habitat loss, logging of nesting trees, and illegal wildlife trafficking. Forest protection, reforestation with native species, and nest monitoring are fundamental actions to guarantee its survival."
+    }
   }
 }
 

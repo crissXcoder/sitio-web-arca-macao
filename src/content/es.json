@@ -160,6 +160,32 @@
     "copyright": "Símbolo de los Cielos — Ciencia y Conservación.",
     "made_with": "Hecho con",
     "by": "por"
+  },
+  "infographics": {
+    "tag": "Recursos Visuales",
+    "title": "Documentación Científica",
+    "subtitle": "Infografías y material educativo para la divulgación y conservación.",
+    "bg_text": "Recursos",
+    "download_btn": "Descargar PNG",
+    "view_btn": "Ver Fullscreen",
+    "close_btn": "Cerrar",
+    "anatomy": {
+      "title": "Anatomía del pico de la lapa roja (Ara macao)",
+      "summary": "El pico de la lapa roja es grande, fuerte y curvado, adaptado para romper semillas y frutos de cáscara dura. Está formado por una estructura ósea recubierta de queratina, un material resistente que protege el pico del desgaste.",
+      "steps_title": "Procesamiento de semillas duras:",
+      "steps": [
+        "Sujeta la semilla con el pico y, en ocasiones, con una de sus patas.",
+        "Aplica presión mediante sus potentes músculos mandibulares.",
+        "Fractura la cáscara gracias a la forma curva y robusta del pico.",
+        "Extrae y consume el contenido nutritivo, descartando los restos."
+      ],
+      "details_title": "Fuerza y musculatura adaptativa",
+      "details": "La lapa roja posee músculos mandibulares muy desarrollados que generan una gran fuerza de mordida. Esta adaptación especializada representa una ventaja evolutiva para aprovechar recursos alimenticios que otras aves no pueden consumir."
+    },
+    "conservation": {
+      "title": "Hábitat y conservación en el trópico seco",
+      "summary": "La Ara macao habita los bosques tropicales secos del Pacífico de Costa Rica, donde depende de árboles grandes para anidar y de una amplia variedad de frutos y semillas para alimentarse. Aunque sus poblaciones se han recuperado en algunas zonas gracias a esfuerzos de conservación, todavía enfrenta amenazas como la pérdida de hábitat, la tala de árboles de anidación y el tráfico ilegal de fauna silvestre. La protección de los bosques, la reforestación con especies nativas y el monitoreo de nidos son acciones fundamentales para garantizar su supervivencia."
+    }
   }
 }
 
