@@ -25,7 +25,7 @@ export default async function Page({ params }: PageProps) {
     const path = await import("path");
     const srcDir = path.join(process.cwd(), "docs");
     const destDir = path.join(process.cwd(), "public", "images");
-    
+
     const filesToCopy = [
       { src: "Ara Macao pico.png", dest: "ara-macao-pico.png" },
       { src: "Lapa roja (1).png", dest: "lapa-roja-conservacion.png" }
@@ -53,21 +53,19 @@ export default async function Page({ params }: PageProps) {
       <main className="flex-1">
         <FlowArt>
           <Hero dict={dict} />
-          <FlowSection aria-label="Campaign Section">
-            <CampaignSection dict={dict} />
-          </FlowSection>
+          <CampaignSection dict={dict} />
           <FlowSection aria-label="Ecology Section">
             <Ecology dict={dict} />
           </FlowSection>
-          <FlowSection aria-label="Threats Section">
-            <Threats dict={dict} />
-          </FlowSection>
-          <FlowSection aria-label="Recovery Section">
-            <Recovery dict={dict} />
-          </FlowSection>
-          <FlowSection aria-label="Sightseeing Section">
-            <Sightseeing dict={dict} />
-          </FlowSection>
+
+          <Threats dict={dict} />
+
+
+          <Recovery dict={dict} />
+
+
+          <Sightseeing dict={dict} />
+
           <FlowSection aria-label="Infographics Section">
             <Infographics dict={dict} />
           </FlowSection>
