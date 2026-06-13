@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { HeroEntrance } from "@/components/animations/hero-entrance";
-import { HeroLapaAnimation } from "@/components/hero/hero-lapa-animation";
+import { HeroLapaVideo } from "@/components/hero/hero-lapa-video";
 import { ArrowRight, Play } from "lucide-react";
 import type { Dictionary } from "@/types/dictionary";
 
@@ -12,7 +12,7 @@ interface HeroProps {
 
 export function Hero({ dict }: HeroProps) {
   return (
-    <HeroLapaAnimation>
+    <HeroLapaVideo>
       {/* Content Container */}
       <HeroEntrance>
         <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-6 lg:px-12 pt-20">
@@ -95,6 +95,6 @@ export function Hero({ dict }: HeroProps) {
           animation: scroll-line 2s cubic-bezier(0.76, 0, 0.24, 1) infinite;
         }
       `}</style>
-    </HeroLapaAnimation>
+    </HeroLapaVideo>
   );
 }

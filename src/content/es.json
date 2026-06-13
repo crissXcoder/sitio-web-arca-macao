@@ -1,5 +1,6 @@
 {
   "nav": {
+    "campaign": "Campaña",
     "ecology": "Ecología",
     "threats": "Amenazas",
     "recovery": "Recuperación",
@@ -152,14 +153,134 @@
     "brand_suffix": "los Cielos",
     "description": "Una iniciativa dedicada a la documentación, protección y divulgación científica de la Lapa Roja en el Corredor Biológico de Guanacaste.",
     "explore_label": "Explorar",
-    "explore_items": ["Ecología", "Amenazas", "Recuperación", "Avistamiento"],
+    "explore_items": ["Campaña", "Ecología", "Amenazas", "Recuperación", "Avistamiento"],
     "legal_label": "Legal",
     "legal_items": ["Privacidad", "Términos", "Científicos", "Prensa"],
     "location_label": "Ubicación",
     "location_text": "Área de Conservación Guanacaste, Costa Rica, América Central.",
     "copyright": "Símbolo de los Cielos — Ciencia y Conservación.",
     "made_with": "Hecho con",
-    "by": "por"
+    "by": "por",
+    "newsletter_title": "Únete a la Conservación",
+    "newsletter_placeholder": "Tu correo electrónico",
+    "newsletter_button": "Scribir",
+    "newsletter_success": "¡Te has unido con éxito!",
+    "newsletter_invalid": "Correo no válido",
+    "widget_time_label": "Hora Local",
+    "widget_gmt": "Costa Rica (GMT-6)"
+  },
+  "infographics": {
+    "tag": "Recursos Visuales",
+    "title": "Documentación Científica",
+    "subtitle": "Infografías y material educativo para la divulgación y conservación.",
+    "bg_text": "Recursos",
+    "download_btn": "Descargar PNG",
+    "view_btn": "Ver Fullscreen",
+    "close_btn": "Cerrar",
+    "anatomy": {
+      "title": "Anatomía del pico de la lapa roja (Ara macao)",
+      "summary": "El pico de la lapa roja es grande, fuerte y curvado, adaptado para romper semillas y frutos de cáscara dura. Está formado por una estructura ósea recubierta de queratina, un material resistente que protege el pico del desgaste.",
+      "steps_title": "Procesamiento de semillas duras:",
+      "steps": [
+        "Sujeta la semilla con el pico y, en ocasiones, con una de sus patas.",
+        "Aplica presión mediante sus potentes músculos mandibulares.",
+        "Fractura la cáscara gracias a la forma curva y robusta del pico.",
+        "Extrae y consume el contenido nutritivo, descartando los restos."
+      ],
+      "details_title": "Fuerza y musculatura adaptativa",
+      "details": "La lapa roja posee músculos mandibulares muy desarrollados que generan una gran fuerza de mordida. Esta adaptación especializada representa una ventaja evolutiva para aprovechar recursos alimenticios que otras aves no pueden consumir."
+    },
+    "conservation": {
+      "title": "Hábitat y conservación en el trópico seco",
+      "summary": "La Ara macao habita los bosques tropicales secos del Pacífico de Costa Rica, donde depende de árboles grandes para anidar y de una amplia variedad de frutos y semillas para alimentarse. Aunque sus poblaciones se han recuperado en algunas zonas gracias a esfuerzos de conservación, todavía enfrenta amenazas como la pérdida de hábitat, la tala de árboles de anidación y el tráfico ilegal de fauna silvestre. La protección de los bosques, la reforestación con especies nativas y el monitoreo de nidos son acciones fundamentales para garantizar su supervivencia."
+    }
+  },
+  "campaign": {
+    "tag": "Campaña de Conservación",
+    "title": "Alas Rojas, Futuro Verde",
+    "subtitle": "Uniendo la ciencia, la educación y la comunidad para restaurar la lapa roja y proteger el trópico seco.",
+    "bg_text": "Campaña",
+    "tabs": {
+      "mission": "La Campaña",
+      "census": "Distribución y Estatus",
+      "botany": "Dependencia Botánica"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "rector_title": "Mensaje Rector de la Campaña",
+      "rector_text": "\"Si protegemos la lapa roja protegemos la vida del bosque, porque es parte de él y depende de nosotros cuidarlas.\"",
+      "description": "La campaña \"Alas Rojas, Futuro Verde\", desarrollada por el equipo de investigación de la UNA Chorotega, busca cerrar la brecha cognitiva entre la investigación especializada y la sociedad civil. Posicionamos a la Ara macao como una \"especie sombrilla\" cuya conservación resguarda colateralmente a todo el bioma.",
+      "umbrella_title": "¿Qué es una Especie Sombrilla?",
+      "umbrella_desc": "Al proteger el inmenso territorio que requiere una pareja de lapas para sobrevivir y los bosques maduros donde anidan, protegemos de forma indirecta el hábitat de miles de insectos, plantas y aves menores que comparten su ecosistema."
+    },
+    "census": {
+      "title": "Estatus Poblacional en Costa Rica",
+      "desc": "Análisis contemporáneo del censo y la viabilidad genética de Ara macao en el territorio nacional:",
+      "regions": [
+        {
+          "name": "Península de Osa",
+          "meta": "Pacífico Sur",
+          "count": "> 1000",
+          "label": "Individuos silvestres",
+          "status": "Viable y Saludable",
+          "desc": "Constituye la mayor población silvestre viable y con la mayor diversidad genética del país."
+        },
+        {
+          "name": "Pacífico Central",
+          "meta": "Carara / Tárcoles",
+          "count": "~ 600",
+          "label": "Individuos silvestres",
+          "status": "Amenazada por Turismo",
+          "desc": "Población viable pero bajo fuerte presión por la fragmentación del paisaje y la infraestructura costera."
+        },
+        {
+          "name": "Región de Guanacaste",
+          "meta": "Punta Islita / Nandayure",
+          "count": "Reintroducida",
+          "label": "Monitoreo Constante",
+          "status": "Dependiente de Conservación",
+          "desc": "Poblaciones reintroducidas exitosamente por Macaw Recovery Network. Dependen de nidos artificiales y protección activa."
+        },
+        {
+          "name": "Otras Zonas Relictas",
+          "meta": "Resto del País",
+          "count": "5 - 20 parejas",
+          "label": "Parejas aisladas",
+          "status": "Riesgo Genético Extremo",
+          "desc": "Pequeños núcleos remanentes aislados, carecen de viabilidad a largo plazo sin el desarrollo de corredores biológicos."
+        }
+      ]
+    },
+    "botany": {
+      "title": "El Dosel Nutricio: Bosque Crítico",
+      "desc": "La conservación de la lapa roja es indisociable de la protección de las especies botánicas del bosque seco. Estas cuatro especies sostienen su ciclo vital:",
+      "trees": [
+        {
+          "name": "Pochote",
+          "scientific": "Bombacopsis quinata",
+          "role": "Cunas Centenarias",
+          "desc": "Su inmenso diámetro y madera de lento crecimiento brindan las cavidades naturales de anidación indispensables para los pichones."
+        },
+        {
+          "name": "Jiñote",
+          "scientific": "Bursera simaruba",
+          "role": "Sostén de Sequía",
+          "desc": "Conocido como 'indio desnudo', provee frutos y semillas esenciales durante los meses más áridos de la transición estacional."
+        },
+        {
+          "name": "Madero Negro",
+          "scientific": "Gliricidia sepium",
+          "role": "Proteína de Dosel",
+          "desc": "Sus hojas, vainas y semillas representan una fuente de nutrición concentrada y altamente proteica para el crecimiento de polluelos."
+        },
+        {
+          "name": "Jobo",
+          "scientific": "Spondias mombin",
+          "role": "Pulpa e Hidratación",
+          "desc": "Genera frutos carnosos que permiten la hidratación y el aporte calórico de las parejas durante el verano estacional."
+        }
+      ]
+    }
   }
 }
 
