@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Download, Maximize2, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,7 +25,7 @@ interface InfographicItem {
 export function Infographics({ dict }: InfographicsProps) {
   const [activeImage, setActiveImage] = useState<InfographicItem | null>(null);
 
-  // Escuchar la tecla de Escape para cerrar el lightbox
+  // Escuchar Escape y bloquear scroll del body cuando el modal está abierto
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -34,6 +35,17 @@ export function Infographics({ dict }: InfographicsProps) {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  useEffect(() => {
+    if (activeImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeImage]);
 
   const handleDownload = (item: InfographicItem, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -225,68 +237,71 @@ export function Infographics({ dict }: InfographicsProps) {
         </div>
       </div>
 
-      {/* Lightbox Modal (Framer Motion) */}
-      <AnimatePresence>
-        {activeImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-md p-4 cursor-zoom-out"
-            onClick={() => setActiveImage(null)}
-          >
-            {/* Botón Cerrar */}
-            <button
-              className="absolute top-6 right-6 z-50 text-foreground hover:text-primary transition-colors duration-300 bg-background border border-border/30 p-3 rounded-none shadow-xl cursor-pointer"
-              onClick={() => setActiveImage(null)}
-              aria-label={dict.infographics.close_btn}
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            {/* Contenedor de Imagen de Alta Resolución */}
+      {/* Lightbox Modal — renderizado via portal en body para escapar overflow-hidden */}
+      {typeof document !== "undefined" && createPortal(
+        <AnimatePresence>
+          {activeImage && (
             <motion.div
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className="relative max-w-5xl max-h-[85vh] w-full aspect-[3/4] md:aspect-auto h-full flex flex-col items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-lg"
+              role="dialog"
+              aria-modal="true"
+              aria-label={activeImage.title}
             >
-              <div className="relative w-full h-[75vh] bg-muted/10 border border-border/20">
-                <Image
-                  src={activeImage.imageSrc}
-                  alt={activeImage.title}
-                  fill
-                  sizes="100vw"
-                  priority
-                  className="object-contain"
-                />
+              {/* Área scrollable — la imagen se renderiza completa */}
+              <div
+                className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
+                onClick={() => setActiveImage(null)}
+              >
+                <div
+                  className="flex justify-center p-4 md:p-8"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Image
+                    src={activeImage.imageSrc}
+                    alt={activeImage.title}
+                    width={1200}
+                    height={1600}
+                    priority
+                    className="w-auto h-auto max-w-full object-contain"
+                  />
+                </div>
               </div>
 
-              {/* Datos de la infografía flotante */}
-              <div className="w-full mt-4 bg-background border border-border/30 p-6 flex flex-wrap gap-4 justify-between items-center rounded-none shadow-2xl">
-                <div className="space-y-1 max-w-xl">
-                  <h4 className="font-serif text-lg text-foreground font-semibold">
+              {/* Toolbar inferior — siempre visible */}
+              <div className="shrink-0 border-t border-border/30 bg-background px-4 py-3 md:px-8 md:py-4 flex items-center gap-4 justify-between">
+                <button
+                  className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] text-foreground hover:text-primary transition-colors duration-200 border border-border/30 bg-background cursor-pointer rounded-none"
+                  onClick={() => setActiveImage(null)}
+                  aria-label={dict.infographics.close_btn}
+                >
+                  <X className="w-5 h-5" />
+                </button>
+
+                <div className="flex-1 min-w-0 px-2">
+                  <h4 className="font-serif text-sm md:text-base text-foreground font-semibold truncate">
                     {activeImage.title}
                   </h4>
-                  <p className="font-sans text-xs text-muted-foreground line-clamp-1">
-                    {activeImage.summary}
-                  </p>
                 </div>
+
                 <Button
                   onClick={(e) => handleDownload(activeImage, e)}
                   variant="default"
-                  className="rounded-none font-bold uppercase tracking-wider text-xs px-6 py-4 bg-primary hover:bg-primary/95 text-white"
+                  className="rounded-none font-bold uppercase tracking-wider text-xs px-4 py-3 md:px-6 md:py-4 bg-primary hover:bg-primary/95 text-white min-h-[44px]"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  {dict.infographics.download_btn}
+                  <span className="hidden sm:inline">{dict.infographics.download_btn}</span>
+                  <span className="sm:hidden sr-only">{dict.infographics.download_btn}</span>
                 </Button>
               </div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 }
